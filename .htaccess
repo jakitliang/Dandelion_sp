@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteRule ^([a-zA-Z]+)/$ index.php?controller=$1
+	RewriteRule ^([a-zA-Z]+)/([a-zA-Z]+)/$ index.php?controller=$1&method=$2
+	RewriteRule ^([a-zA-Z]+)/([a-zA-Z]+)/([0-9]+).html$ index.php?controller=$1&method=$2&id=$3
+	RewriteRule ^([a-zA-Z]+)/([a-zA-Z]+)/([0-9]+)/([0-9]+).html$ index.php?controller=$1&method=$2&id=$3$page=$4
+</IfModule>
